@@ -1,0 +1,4 @@
+server:
+  port: 4560
+  servlet:
+    context-path: /
