@@ -4,10 +4,10 @@ import com.rss.boot.bean.rss.RssChannel;
 import com.rss.boot.bean.rss.RssImage;
 import com.rss.boot.bean.rss.RssItem;
 import com.rss.boot.handler.douyin.bean.DouyinUserAwemeV1DTO;
+import com.rss.boot.util.DateFormatUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -82,7 +82,7 @@ public class DouyinParseUtil {
                         rssItem.setAuthor(nickname);
                         rssItem.setLink(shareurl);
                         rssItem.setUri(shareurl);
-                        rssItem.setPubDate(new Date(createTime));
+                        rssItem.setPubDate(DateFormatUtil.secondToMillisecond(createTime));
                         rssItem.setDescription(description);
                         rssItemList.add(rssItem);
                     }
