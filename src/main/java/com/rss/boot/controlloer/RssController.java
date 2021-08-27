@@ -22,6 +22,7 @@ public class RssController {
 
     @GetMapping(path = "/rss1")
     public Channel rss() {
+        log.info("rss1");
 
         Channel channel = new Channel();
         channel.setFeedType("rss_2.0");
