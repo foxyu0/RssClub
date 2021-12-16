@@ -16,3 +16,9 @@ spring:
         max-idle: 32
         max-wait: 1000
         min-idle: 5
+
+
+#logback配置
+logging:
+  config: classpath:logback-spring.xml
+logPath: /Users/su/develop/logs/rss-club/
